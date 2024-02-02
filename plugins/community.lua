@@ -6,4 +6,16 @@ return {
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.pack.rust" },
+  {
+    "simrat39/rust-tools.nvim",
+    opts = {
+      ensure_installed = { "rust_analyzer" },
+      tools = {
+        hover_actions = {
+          auto_focus = true,
+        }
+      }
+    },
+  },
 }
