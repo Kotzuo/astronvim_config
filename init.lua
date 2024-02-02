@@ -45,7 +45,7 @@ return {
         "eslint",
         "tsserver",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 60000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
