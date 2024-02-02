@@ -9,4 +9,8 @@ return {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
+  {
+    'andweeb/presence.nvim',
+    lazy = false,
+  },
 }
