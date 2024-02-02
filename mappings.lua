@@ -15,5 +15,7 @@ return {
     ["<C-k>"] = { "<cmd>TmuxNavigateUp<CR>", desc = "window up"},
     -- Rust
     ["<leader>k"] = { "<cmd>RustHoverActions<CR>", desc = "Show rust hover actions"},
+    -- Formatting
+    ["<leader>lF"] = { "<cmd>noa w<CR>", desc = "Save without formatting"},
   },
 }
