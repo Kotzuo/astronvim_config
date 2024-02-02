@@ -13,5 +13,7 @@ return {
     ["<C-l>"] = { "<cmd>TmuxNavigateRight<CR>", desc = "window right"},
     ["<C-j>"] = { "<cmd>TmuxNavigateDown<CR>", desc = "window down"},
     ["<C-k>"] = { "<cmd>TmuxNavigateUp<CR>", desc = "window up"},
+    -- Rust
+    ["<leader>k"] = { "<cmd>RustHoverActions<CR>", desc = "Show rust hover actions"},
   },
 }
