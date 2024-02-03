@@ -17,5 +17,15 @@ return {
     ["<leader>k"] = { "<cmd>RustHoverActions<CR>", desc = "Show rust hover actions"},
     -- Formatting
     ["<leader>lF"] = { "<cmd>noa w<CR>", desc = "Save without formatting"},
+    -- Vscode launch json
+    ["<leader>dc"] = {
+      function()
+        if vim.fn.filereadable('.vscode/launch.json') then
+          require('dap.ext.vscode').load_launchjs()
+        end  
+        require("dap").continue()
+      end,
+      desc = "Start/Continue (F5)"
+    },
   },
 }
