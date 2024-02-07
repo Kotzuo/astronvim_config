@@ -20,4 +20,5 @@ return {
   },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
 }
