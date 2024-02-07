@@ -1,0 +1,26 @@
+return {
+  "chrisgrieser/nvim-chainsaw",
+  event = "VeryLazy",
+  ft = {
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "lua",
+    "python",
+    "sh",
+    "rust",
+    "css",
+    "ruby",
+  },
+  keys = {
+    { "<leader>Lb", function() require("chainsaw").beepLog() end, desc = "Beep log" },
+    { "<leader>Ll", function() require("chainsaw").variableLog() end, mode = { "n", "x" }, desc = "Variable log" },
+    { "<leader>Lo", function() require("chainsaw").objectLog() end, mode = { "n", "x" }, desc = "Object log" },
+    { "<leader>Lm", function() require("chainsaw").messageLog() end, desc = "Message log" },
+    { "<leader>Lt", function() require("chainsaw").timeLog() end, desc = "Time log" },
+    { "<leader>Ld", function() require("chainsaw").debugLog() end, desc = "Debugger log" },
+    { "<leader>La", function() require("chainsaw").assertLog() end, mode = { "n", "x" }, desc = "Assert log" },
+    { "<leader>Lr", function() require("chainsaw").removeLogs() end, desc = "Remove logs" },
+  },
+}
