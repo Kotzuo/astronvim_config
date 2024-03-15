@@ -52,7 +52,21 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "tailwindcss",
+    },
+    config = {
+      tailwindcss = {
+        single_filesupport = false,
+        settings = {
+          tailwindCSS = {
+            experimental = {
+              classRegex = {
+                { "tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+              },
+            },
+          },
+        },
+      },
     },
     -- setup rust-tools
     setup_handlers = {
