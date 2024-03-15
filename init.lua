@@ -56,7 +56,6 @@ return {
     },
     config = {
       tailwindcss = {
-        single_filesupport = false,
         settings = {
           tailwindCSS = {
             experimental = {
