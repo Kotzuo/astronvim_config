@@ -1,23 +1,6 @@
 return {
-  -- Add the community repository of plugin specifications
   "AstroNvim/astrocommunity",
-  -- example of imporing a plugin, comment out to use it or add your own
-  -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
-
-  -- { import = "astrocommunity.colorscheme.catppuccin" },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.rust" },
-  {
-    "simrat39/rust-tools.nvim",
-    opts = {
-      ensure_installed = { "rust_analyzer" },
-      tools = {
-        hover_actions = {
-          auto_focus = true,
-        },
-      },
-    },
-  },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
@@ -29,5 +12,19 @@ return {
       { "[T", function() require("todo-comments").jump_next() end, desc = "Previous todo comment" },
       { "<leader>T", "<cmd>TodoTrouble<cr>", desc = "Show all todo's" },
     },
+  },
+  { import = "astrocommunity.test.neotest" },
+  {
+    "nvim-neotest/neotest",
+    opts = function()
+      return {
+        adapters = {
+          require "neotest-python" {
+            runner = "pytest",
+            pytest_discover_instances = true,
+          },
+        },
+      }
+    end,
   },
 }
